@@ -15,7 +15,13 @@ public:
     PotatoList<KeyUnit> keys;
 
 public:
-    void setKey(int index, KeyUnit *key);
+    void setKey(int index, KeyUnit *key) {
+        keys.set(index, key);
+    }
+
+    void addKey(KeyUnit *key) {
+        keys.add(key);
+    }
 };
 
 

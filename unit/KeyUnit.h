@@ -7,6 +7,10 @@
 
 #include <string>
 
+using std::string;
+
+
+
 class KeyUnit {
     enum Type {
         INT, BOOLEAN

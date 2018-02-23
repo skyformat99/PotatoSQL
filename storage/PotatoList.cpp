@@ -23,10 +23,15 @@ template<class T>
 void PotatoList<T>::remove(int index) {
     int count = 0;
     Node<T> *tmp = top;
+    Node<T> *last = nullptr;
+    if (index == 0) {
+        top = top->next;
+    }
     while (tmp) {
         if (index == count) {
-
+            last->next = tmp->next;
         }
+        last = tmp;
         tmp = tmp->next;
         count++;
     }
@@ -53,7 +58,30 @@ T PotatoList<T>::get(int index) {
 
 template<class T>
 void PotatoList<T>::insert(int index, T *obj) {
+    Node<T> *tmp = get(index);
+    auto *node = new Node<T>();
+    node->data = obj;
+    node->next = tmp->next;
+    tmp->next = node;
+}
 
+template<class T>
+int PotatoList<T>::size() {
+    Node<T> *tmp = top;
+    int count = 0;
+    while (tmp) {
+        count++;
+        tmp = tmp->next;
+    }
+    return count;
+}
+
+template<class T>
+void PotatoList<T>::set(int index, T *obj) {
+    Node<T> *node = get(index);
+    if (node != nullptr) {
+        node->data = obj;
+    }
 }
 
 

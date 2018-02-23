@@ -4,5 +4,3 @@
 
 #include "SchemaUnit.h"
 
-void SchemaUnit::setKey(int index, KeyUnit *key) {
-}

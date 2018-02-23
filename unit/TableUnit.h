@@ -5,13 +5,12 @@
 #ifndef POTATOSQL_TABLEUNIT_H
 #define POTATOSQL_TABLEUNIT_H
 
-#include <list>
 #include "KeyUnit.h"
+#include "../storage/PotatoList.h"
 
 class TableUnit {
 public:
-    list<KeyUnit> keys;
-
+    PotatoList<KeyUnit> keys;
 };
 
 

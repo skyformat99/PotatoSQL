@@ -26,6 +26,9 @@ public:
 
     bool empty();
 
+    int size();
+
+    void set(int index, T *obj);
 };
 
 #endif //POTATOSQL_POTATOLIST_H
