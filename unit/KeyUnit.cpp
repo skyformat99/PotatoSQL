@@ -4,7 +4,7 @@
 
 #include "KeyUnit.h"
 
-KeyUnit::KeyUnit(string name, KeyUnit::Type type) {
+KeyUnit::KeyUnit(string name, KeyType type) {
     this->name = name;
     this->type = type;
 }

@@ -5,11 +5,7 @@
 #ifndef POTATOSQL_POTATOLIST_H
 #define POTATOSQL_POTATOLIST_H
 
-template<class T>
-struct Node {
-    T *data;
-    Node *next;
-};
+#include "Iterator.h"
 
 template<class T>
 class PotatoList {
@@ -29,6 +25,8 @@ public:
     int size();
 
     void set(int index, T *obj);
+
+    Iterator<T> iterator();
 };
 
 #endif //POTATOSQL_POTATOLIST_H

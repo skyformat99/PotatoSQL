@@ -84,5 +84,10 @@ void PotatoList<T>::set(int index, T *obj) {
     }
 }
 
+template<class T>
+Iterator<T> PotatoList<T>::iterator() {
+    return Iterator<T>(top);
+}
+
 
 

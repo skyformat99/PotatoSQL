@@ -9,19 +9,18 @@
 
 using std::string;
 
-
+enum KeyType {
+    INT = 1,
+    BOOLEAN = 2
+};
 
 class KeyUnit {
-    enum Type {
-        INT, BOOLEAN
-    };
-
 public:
     string name;
-    Type type;
+    KeyType type;
 
 public:
-    KeyUnit(string name, enum Type type);
+    KeyUnit(string name, enum KeyType type);
 };
 
 

@@ -8,11 +8,13 @@
 #include <string>
 #include "KeyUnit.h"
 #include "../storage/PotatoList.h"
+#include "TableUnit.h"
 
 class SchemaUnit {
 public:
     string name;
     PotatoList<KeyUnit> keys;
+    PotatoList<TableUnit> tables;
 
 public:
     void setKey(int index, KeyUnit *key) {
@@ -21,6 +23,10 @@ public:
 
     void addKey(KeyUnit *key) {
         keys.add(key);
+    }
+
+    void addTable(TableUnit *table) {
+        tables.add(table);
     }
 };
 

@@ -7,10 +7,15 @@
 
 #include "KeyUnit.h"
 #include "../storage/PotatoList.h"
+#include "SchemaUnit.h"
+#include "RecordUnit.h"
 
 class TableUnit {
 public:
-    PotatoList<KeyUnit> keys;
+    PotatoList<int> keys;
+    PotatoList<RecordUnit> recoard;
+    SchemaUnit schema;
+    string name;
 };
 
 
